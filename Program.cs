@@ -27,6 +27,7 @@ Usage: aupatch [<mode>] [<options>]
 These are the available modes:
     MODE         DESC
     --install    Allows you to run aupatch install scripts
+    --curver     Shows the current aupatch and OS version.
     
 You have not provided any commands. The session will now end. Good bye!
 
@@ -50,6 +51,12 @@ You have not provided any commands. The session will now end. Good bye!
                     catch (Exception ex) {
                         Console.WriteLine($"An unexpected error occurred: {ex.Message}");
                     }
+                }
+                else if (args[0] == "--curver") {
+                    Console.WriteLine("-= AUPATCH by Harry \"scrundae\" Collins =-");
+                    Console.WriteLine("aupatch version: 1.0");
+                    Console.WriteLine($"OS version: {System.Environment.OSVersion}");
+                    Console.WriteLine("\n--- AUPATCH INACTIVE ---\n");
                 }
                 else {
                     Console.WriteLine("Invalid arguments.");
