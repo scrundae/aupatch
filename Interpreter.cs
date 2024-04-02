@@ -1,7 +1,6 @@
 using System.Net;
 using System.Security;
 using System.IO;
-using IronPython.Hosting;
 
 namespace Aupatch {
     namespace Scripting {
