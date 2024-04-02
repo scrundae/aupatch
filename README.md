@@ -7,10 +7,7 @@ Aupatch packages can be installed by running the --install command
 ## Creating packages
 To make a package, you need to have the files to the package online. Then, you need to make a master script that installes all these files.
 <br>Here's an example:<br>
-<code>
-cast "Installation started"
-</code>
+
+<code>cast "Installation started"</code>
 <br>
-<code>
-install [ FILE URL ] at [ PLACE ON USERS COMPUTER (E.g. Program Files) ]
-</code>
+<code>install [ FILE URL ] at [ PLACE ON USERS COMPUTER (E.g. Program Files) ]</code>
