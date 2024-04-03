@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yAInjks5O6z9uXpNPPG5fRA+vrvgU7ZmHO4wlT6YX7xX1EWlwARQRl4kuTwAmvOcw6V8fISyvLwghE5aqRFsAg==",
+  "dgSpecHash": "lC9Av7vpMWp5uVcQAoTO9peVDV9qOiRZx+UVKiBD0ZKEzqWrXlFB70uLbvEIg+UYYhC45WgI4WmxTNBgdjGh+A==",
   "success": true,
   "projectFilePath": "C:\\Users\\scrundaegames\\source\\repos\\aupatch\\aupatch.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\scrundaegames\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\8.0.0\\microsoft.netcore.app.host.linux-x64.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
