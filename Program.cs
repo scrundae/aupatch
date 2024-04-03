@@ -28,6 +28,7 @@ These are the available modes:
     MODE         DESC
     --install    Allows you to run aupatch install scripts
     --curver     Shows the current aupatch and OS version.
+    --cat        Shows the install script that will be run.
     
 You have not provided any commands. The session will now end. Good bye!
 
@@ -57,6 +58,29 @@ You have not provided any commands. The session will now end. Good bye!
                     Console.WriteLine("aupatch version: 1.0");
                     Console.WriteLine($"OS version: {System.Environment.OSVersion}");
                     Console.WriteLine("\n--- AUPATCH INACTIVE ---\n");
+                }
+                else if (args[0] == "--cat") {
+                    try {
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine($"[{args[1]}]");
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        WebClient client = new WebClient();
+                        client.DownloadFile(new Uri(args[1]), "AU-TEMP");
+                        string[] data = File.ReadAllLines("AU-TEMP");
+                        foreach (string line in data) {
+                            Console.WriteLine(line);
+                        }
+                        Console.WriteLine("\n--- AUPATCH INACTIVE ---\n");
+                    }
+                    catch (WebException ex) {
+                        Console.WriteLine($"Error getting: {ex.Message}");
+                    }
+                    catch (IOException ex) {
+                        Console.WriteLine($"Error reading or writing temporary file: {ex.Message}");
+                    }
+                    catch (Exception ex) {
+                        Console.WriteLine($"An unexpected error occurred: {ex.Message}");
+                    }
                 }
                 else {
                     Console.WriteLine("Invalid arguments.");
