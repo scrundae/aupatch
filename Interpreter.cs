@@ -13,8 +13,8 @@ namespace Aupatch {
                         continue;
 
                     if (parsed[0] == "cast") {
-                        parsed[1] = parsed[1].Replace("%ANSVAL", ansval);
-                        Console.WriteLine(parsed[1]);
+                        
+                        Console.WriteLine(parsed[1].Replace("%ANSVAL", ansval));
                     }
                     else if (parsed[0] == "install") {
                         if (parsed.Length >= 4 && parsed[2] == "at") {
