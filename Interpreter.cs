@@ -5,6 +5,7 @@ using System.IO;
 namespace Aupatch {
     namespace Scripting {
         public class Interpreter {
+            public static string ansval;
             public static void Interpret(string[] script) {
                 foreach (string line in script) {
                     var parsed = ParseCommandLine(line);
@@ -12,24 +13,29 @@ namespace Aupatch {
                         continue;
 
                     if (parsed[0] == "cast") {
+                        parsed[1] = parsed[1].Replace("%ANSVAL", ansval);
                         Console.WriteLine(parsed[1]);
                     }
                     else if (parsed[0] == "install") {
                         if (parsed.Length >= 4 && parsed[2] == "at") {
                             try {
-                                string directoryPath = Path.GetDirectoryName(parsed[3]);
+                                string directoryPath = Path.GetDirectoryName(parsed[3].Replace("%ANSVAL", ansval));
                                 if (!string.IsNullOrEmpty(directoryPath) && !Directory.Exists(directoryPath))
                                 {
                                     Directory.CreateDirectory(directoryPath);
                                 }
                                 using (WebClient client = new WebClient()) {
-                                    client.DownloadFile(parsed[1], parsed[3]);
+                                    client.DownloadFile(parsed[1], parsed[3].Replace("%ANSVAL", ansval));
                                 }
                             }
                             catch(WebException ex) {
                                 Console.WriteLine(ex.Message);
                             }
                         }
+                    }
+                    else if (parsed[0] == "ask") {
+                        Console.Write(parsed[1]);
+                        ansval = Console.ReadLine();
                     }
                 }
     Console.WriteLine("\n--- AUPATCH INACTIVE ---\n");

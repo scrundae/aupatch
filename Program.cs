@@ -29,7 +29,7 @@ These are the available modes:
     --install    Allows you to run aupatch install scripts
     --curver     Shows the current aupatch and OS version.
     --cat        Shows the install script that will be run.
-    
+
 You have not provided any commands. The session will now end. Good bye!
 
 --- AUPATCH INACTIVE ---
