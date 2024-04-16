@@ -1,6 +1,4 @@
-![ironide-logo](https://github.com/scrundae/ironide/assets/121592185/b8416581-b2b6-488c-aa31-027393fd671a)
-
-# Auto (or Australian) Patcher
+# IRONIDE PATCHER
 A package manager by scrundaegames
 ## Installing Packages
 ironide packages can be installed by running the --install command
