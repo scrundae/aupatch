@@ -2,7 +2,7 @@ using System.Net;
 using System.Security;
 using System.IO;
 
-namespace Aupatch {
+namespace ironide {
     namespace Scripting {
         public class Interpreter {
             public static string ansval;
@@ -38,7 +38,7 @@ namespace Aupatch {
                         ansval = Console.ReadLine();
                     }
                 }
-    Console.WriteLine("\n--- AUPATCH INACTIVE ---\n");
+    Console.WriteLine("\n--- ironide INACTIVE ---\n");
 }
 
 

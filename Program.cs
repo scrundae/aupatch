@@ -1,5 +1,5 @@
 ﻿/////////////////////////////////////////////////////////////////////////
-// aupatch: A cross-platform package manager.                          //
+// ironide: A cross-platform package manager.                          //
 // Created by scrundaegames: @scrundae on YouTube and Twitter (sadly)  //
 // My website is: https://scrundae.github.io                           //
 // Thanks!                                                             //
@@ -9,30 +9,30 @@ using System;
 using System.IO;
 using System.Net;
 using System.Runtime.CompilerServices;
-using Aupatch.Scripting;
+using ironide.Scripting;
 
-namespace Aupatch {
+namespace ironide {
     public class Program {
         public static void Main(string[] args) {
-            Console.WriteLine("\n--- AUPATCH ACTIVE ---\n");
+            Console.WriteLine("\n--- ironide ACTIVE ---\n");
             //Console.WriteLine(args[0]);
             if (args.Length == 0) {
-                Console.WriteLine(@"Auto (or Australian) Patcher
+                Console.WriteLine(@"IRONIDE PATCHER
 Created by scrundaegames: @scrundae on YouTube and Twitter (sadly)
 
-aupatch allows you to download and install different applications.
+ironide allows you to download and install different applications.
 
-Usage: aupatch [<mode>] [<options>]
+Usage: ironide [<mode>] [<options>]
 
 These are the available modes:
     MODE         DESC
-    --install    Allows you to run aupatch install scripts
-    --curver     Shows the current aupatch and OS version.
+    --install    Allows you to run ironide install scripts
+    --curver     Shows the current ironide and OS version.
     --cat        Shows the install script that will be run.
 
 You have not provided any commands. The session will now end. Good bye!
 
---- AUPATCH INACTIVE ---
+--- ironide INACTIVE ---
 ");
             }
             else {
@@ -54,10 +54,10 @@ You have not provided any commands. The session will now end. Good bye!
                     }
                 }
                 else if (args[0] == "--curver") {
-                    Console.WriteLine("-= AUPATCH by Harry \"scrundae\" Collins =-");
-                    Console.WriteLine("aupatch version: 1.0");
+                    Console.WriteLine("-= ironide by Harry \"scrundae\" Collins =-");
+                    Console.WriteLine("ironide version: 1.0");
                     Console.WriteLine($"OS version: {System.Environment.OSVersion}");
-                    Console.WriteLine("\n--- AUPATCH INACTIVE ---\n");
+                    Console.WriteLine("\n--- ironide INACTIVE ---\n");
                 }
                 else if (args[0] == "--cat") {
                     try {
@@ -70,7 +70,7 @@ You have not provided any commands. The session will now end. Good bye!
                         foreach (string line in data) {
                             Console.WriteLine(line);
                         }
-                        Console.WriteLine("\n--- AUPATCH INACTIVE ---\n");
+                        Console.WriteLine("\n--- ironide INACTIVE ---\n");
                     }
                     catch (WebException ex) {
                         Console.WriteLine($"Error getting: {ex.Message}");

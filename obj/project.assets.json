@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\scrundaegames\\source\\repos\\aupatch\\aupatch.csproj",
-      "projectName": "aupatch",
-      "projectPath": "C:\\Users\\scrundaegames\\source\\repos\\aupatch\\aupatch.csproj",
+      "projectUniqueName": "C:\\Users\\scrundaegames\\source\\repos\\ironide\\ironide.csproj",
+      "projectName": "ironide",
+      "projectPath": "C:\\Users\\scrundaegames\\source\\repos\\ironide\\ironide.csproj",
       "packagesPath": "C:\\Users\\scrundaegames\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\scrundaegames\\source\\repos\\aupatch\\obj\\",
+      "outputPath": "C:\\Users\\scrundaegames\\source\\repos\\ironide\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
